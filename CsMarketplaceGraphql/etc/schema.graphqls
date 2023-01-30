@@ -1,0 +1,11 @@
+type Query
+{
+    csproducts (
+        vendor_id: String @doc(description: "vendor id")
+    ): CsProductAttributeFiltersOutput @resolver(class: "Ced\\CsMarketplaceGraphql\\Model\\Resolver\\Products\\ProductAttributeFilter") @doc(description:"Custom Filters")
+}
+type CsProductAttributeFiltersOutput
+{
+    aggregations: [Aggregation] @doc(description: "Layered navigation aggregations.")
+    seller_info:
+}
